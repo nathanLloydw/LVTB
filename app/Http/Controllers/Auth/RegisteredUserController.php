@@ -47,6 +47,7 @@ class RegisteredUserController extends Controller
         ]);
 
         event(new Registered($user));
+        /** todo: user->sendEmailVerificationNotification() */
 
         Auth::login($user);
 
